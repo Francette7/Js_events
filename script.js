@@ -42,3 +42,17 @@ cardBtnEdit2.addEventListener("click", function() {
 });
 
 // Fonctionnalité 5 :
+let getCDN = document.querySelector(".navbar")
+let getLink = document.querySelector("link")
+let y = false;
+getCDN.addEventListener("click", function() {
+	if (y == false) {
+		getLink.setAttribute("href", "#");
+		y = true;
+	} else if (y == true) {
+		getLink.setAttribute("href", "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+		y = false;
+	}
+});
+
+// Fonctionnalité 6 :

@@ -56,3 +56,38 @@ getCDN.addEventListener("click", function() {
 });
 
 // Fonctionnalité 6 :
+/*let toggleImage = document.getElementsByClassName("card-img-top")[2]
+let toggleText = document.getElementsByClassName("card-text")[2]
+let toggleView = document.getElementsByClassName("btn btn-sm btn-success")[2]
+let v = false;
+toggleView.addEventListener("mouseover", function() {
+	if (v == false) {
+		toggleImage.style.width = "20%";
+		toggleText.style.display = "none";
+		v = true;
+	} else if (v == true) {
+		toggleImage.style.width = "100%";
+		toggleText.style.display = "block";
+		v = false;
+	}
+})*/ 
+
+let toggleView = document.querySelectorAll(".btn.btn-sm.btn-success")
+
+for (let i = 0; i < toggleView.length; i++) {
+	 let p = toggleView[i].parentNode.parentNode.parentNode.previousElementSibling;
+	 let q = toggleView[i].parentNode.parentNode.previousElementSibling;
+		let v = false;
+	toggleView[i].addEventListener("mouseover", function() {
+	if (v == false) {
+		p.style.width = "20%";
+		q.style.display = "none";
+		v = true;
+	}else if (v == true) {
+		p.style.width = "100%";
+		q.style.display = "block";
+		v = false;
+	}
+});
+}
+	
